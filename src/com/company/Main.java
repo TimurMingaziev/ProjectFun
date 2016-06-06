@@ -1,14 +1,20 @@
 package com.company;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         int i = 0;
+        Logger log = LogManager.getLogger(Main.class);
+
+        log.log(Level.INFO, "looool");
         ArrayList<Student> list = new ArrayList();
 
         while (true) {
-       //   Thread.sleep(1);
+          Thread.sleep(1000);
             System.out.println(list.size());
 
 
@@ -23,9 +29,9 @@ public class Main {
                 }
 
             } else {
-                //Student st = new Student();
+
                 list.add(new Student(i, Math.random()+"fffffffffffff",Math.random()));
-               // System.out.println(list.get(list.size() - 1));
+
             }
             i++;
         }
