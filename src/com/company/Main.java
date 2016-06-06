@@ -1,16 +1,20 @@
 package com.company;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.Timer;
+
+
 public class Main {
+    private static final Logger LOG = LoggerFactory.getLogger("logfile");
 
     public static void main(String[] args) throws InterruptedException {
         int i = 0;
-        Logger log = LogManager.getLogger(Main.class);
+        Timer time = new Timer();
 
-        log.log(Level.INFO, "looool");
+        LOG.info("looool");
         ArrayList<Student> list = new ArrayList();
 
         while (true) {

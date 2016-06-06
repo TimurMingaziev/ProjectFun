@@ -1,8 +1,5 @@
 package com.company;
 
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import sun.util.calendar.BaseCalendar;
 
 import java.time.DateTimeException;
